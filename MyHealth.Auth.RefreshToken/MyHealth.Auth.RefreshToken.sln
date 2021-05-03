@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHealth.Auth.RefreshToken", "MyHealth.Auth.RefreshToken\MyHealth.Auth.RefreshToken.csproj", "{DC92CC0A-5A67-4DE8-BB9D-2DDDFAE7277D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHealth.Auth.RefreshToken.UnitTests", "MyHealth.Auth.RefreshToken.UnitTests\MyHealth.Auth.RefreshToken.UnitTests.csproj", "{6FEE817B-C72E-4FCF-997C-24A2C508516C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC92CC0A-5A67-4DE8-BB9D-2DDDFAE7277D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC92CC0A-5A67-4DE8-BB9D-2DDDFAE7277D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC92CC0A-5A67-4DE8-BB9D-2DDDFAE7277D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC92CC0A-5A67-4DE8-BB9D-2DDDFAE7277D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FEE817B-C72E-4FCF-997C-24A2C508516C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FEE817B-C72E-4FCF-997C-24A2C508516C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FEE817B-C72E-4FCF-997C-24A2C508516C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FEE817B-C72E-4FCF-997C-24A2C508516C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEE42357-7CCF-4133-B875-70EAC1AD12DE}
+	EndGlobalSection
+EndGlobal
