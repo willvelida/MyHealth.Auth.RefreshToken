@@ -5,8 +5,6 @@ using MyHealth.Auth.RefreshToken.Models;
 using MyHealth.Auth.RefreshToken.Services;
 using MyHealth.Common;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -63,7 +61,7 @@ namespace MyHealth.Auth.RefreshToken.UnitTests.ServiceTests
             Func<Task> keyVaultServiceAction = async () => await _sut.SaveTokensToKeyVault(testTokenResponse);
 
             // Assert
-            await keyVaultServiceAction.Should().ThrowAsync<Exception>();            
+            await keyVaultServiceAction.Should().ThrowAsync<Exception>();
         }
     }
 }

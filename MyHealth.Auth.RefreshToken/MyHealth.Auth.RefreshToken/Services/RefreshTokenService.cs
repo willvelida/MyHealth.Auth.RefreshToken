@@ -51,7 +51,7 @@ namespace MyHealth.Auth.RefreshToken.Services
             catch (Exception ex)
             {
                 throw ex;
-            }          
+            }
         }
     }
 }

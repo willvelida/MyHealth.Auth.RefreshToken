@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Timers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -9,8 +8,6 @@ using MyHealth.Auth.RefreshToken.Models;
 using MyHealth.Auth.RefreshToken.Services;
 using MyHealth.Common;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
