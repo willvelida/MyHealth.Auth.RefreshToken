@@ -29,7 +29,7 @@ namespace MyHealth.Auth.RefreshToken.Functions
         }
 
         [FunctionName(nameof(RefreshAccessToken))]
-        public async Task Run([TimerTrigger("0 */5 * * * *")] TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("0 0 */6 * * *")] TimerInfo myTimer, ILogger log)
         {
             try
             {

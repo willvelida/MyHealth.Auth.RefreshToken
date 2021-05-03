@@ -30,7 +30,7 @@ namespace MyHealth.Auth.RefreshToken
             builder.Services.AddSingleton<IKeyVaultHelper>(sp =>
             {
                 IConfiguration configuration = sp.GetService<IConfiguration>();
-                return new KeyVaultHelper(configuration["KeyVaultName"], configuration["tenantId"], configuration["clientId"], configuration["clientSecret"]);
+                return new KeyVaultHelper(configuration["KeyVaultName"]);
             });
 
             builder.Services.AddScoped<IRefreshTokenService, RefreshTokenService>();
