@@ -21,6 +21,8 @@ namespace MyHealth.Auth.RefreshToken.UnitTests.ServiceTests
         public RefreshTokenServiceShould()
         {
             _mockConfiguration = new Mock<IConfiguration>();
+            _mockConfiguration.Setup(x => x["RefreshTokenName"]).Returns("RefreshTokenName");
+            _mockConfiguration.Setup(x => x["FitbitCredentials"]).Returns("FitbitCredentials");
             _mockKeyVaultHelper = new Mock<IKeyVaultHelper>();
             _mockHttpClient = new Mock<HttpClient>();
 

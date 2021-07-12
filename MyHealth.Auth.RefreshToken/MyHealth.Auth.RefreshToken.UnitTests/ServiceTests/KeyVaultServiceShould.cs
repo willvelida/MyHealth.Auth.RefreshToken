@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using AutoFixture;
+using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 using Moq;
 using MyHealth.Auth.RefreshToken.Models;
@@ -31,11 +32,8 @@ namespace MyHealth.Auth.RefreshToken.UnitTests.ServiceTests
         public async Task SaveSecretToKeyVaultSuccessfully()
         {
             // Arrange
-            RefreshTokenResponse testTokenResponse = new RefreshTokenResponse
-            {
-                AccessToken = "TestAccessToken",
-                RefreshToken = "TestRefreshToken"
-            };
+            var fixture = new Fixture();
+            var testTokenResponse = fixture.Create<RefreshTokenResponse>();
 
             // Act
             Func<Task> keyVaultServiceAction = async () => await _sut.SaveTokensToKeyVault(testTokenResponse);
@@ -49,11 +47,8 @@ namespace MyHealth.Auth.RefreshToken.UnitTests.ServiceTests
         public async Task ThrowExceptionWhenSaveSecretToKeyVaultAsyncFails()
         {
             // Arrange
-            RefreshTokenResponse testTokenResponse = new RefreshTokenResponse
-            {
-                AccessToken = "TestAccessToken",
-                RefreshToken = "TestRefreshToken"
-            };
+            var fixture = new Fixture();
+            var testTokenResponse = fixture.Create<RefreshTokenResponse>();
 
             _mockKeyVaultHelper.Setup(x => x.SaveSecretToKeyVaultAsync(It.IsAny<string>(), It.IsAny<string>())).ThrowsAsync(new Exception());
 

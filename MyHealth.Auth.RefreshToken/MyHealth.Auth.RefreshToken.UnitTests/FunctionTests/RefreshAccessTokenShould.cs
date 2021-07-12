@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using AutoFixture;
+using FluentAssertions;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -43,11 +44,8 @@ namespace MyHealth.Auth.RefreshToken.UnitTests.FunctionTests
         {
             // Arrange
             var timer = default(TimerInfo);
-            var testRefreshTokenResponse = new RefreshTokenResponse
-            {
-                AccessToken = "TestAccessToken",
-                RefreshToken = "TestRefreshToken"
-            };
+            var fixture = new Fixture();
+            var testRefreshTokenResponse = fixture.Create<RefreshTokenResponse>();
 
             _mockRefreshTokenService.Setup(x => x.RefreshToken()).ReturnsAsync(testRefreshTokenResponse);
             _mockKeyVaultService.Setup(x => x.SaveTokensToKeyVault(It.IsAny<RefreshTokenResponse>())).Returns(Task.CompletedTask);
@@ -83,11 +81,8 @@ namespace MyHealth.Auth.RefreshToken.UnitTests.FunctionTests
         {
             // Arrange
             var timer = default(TimerInfo);
-            var testRefreshTokenResponse = new RefreshTokenResponse
-            {
-                AccessToken = "TestAccessToken",
-                RefreshToken = "TestRefreshToken"
-            };
+            var fixture = new Fixture();
+            var testRefreshTokenResponse = fixture.Create<RefreshTokenResponse>();
 
             _mockRefreshTokenService.Setup(x => x.RefreshToken()).ReturnsAsync(testRefreshTokenResponse);
             _mockKeyVaultService.Setup(x => x.SaveTokensToKeyVault(It.IsAny<RefreshTokenResponse>())).ThrowsAsync(new Exception());
